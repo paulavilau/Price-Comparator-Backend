@@ -8,4 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PriceEntryRepository extends JpaRepository<PriceEntry, Long> {
     Optional<PriceEntry> findByProductAndStoreAndDate(Product product, Store store, LocalDate date);
+
+    List<PriceEntry> findByProductAndDate(Product product, LocalDate date);
 }
