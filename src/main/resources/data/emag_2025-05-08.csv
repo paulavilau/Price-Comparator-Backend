@@ -1,0 +1,15 @@
+product_id,product_name,product_category,brand,package_quantity,package_unit,price,currency
+P068,iaurt de băut,lactate,Activia,0.33,kg,5.00,RON
+P069,unt 82%,lactate,LaDorna,0.2,kg,8.90,RON
+P070,salată iceberg,legume și fructe,Profi,1,buc,4.50,RON
+P071,apă minerală,băuturi,Borsec,2,l,4.20,RON
+P072,bere blondă,băuturi,Ursus,0.5,l,3.80,RON
+P073,napolitane cu cremă,gustări,Joe,0.18,kg,4.10,RON
+P074,lapte condensat,alimente de bază,Milkpak,0.4,kg,6.70,RON
+P075,orez cu bob lung,alimente de bază,Arpis,1,kg,5.30,RON
+P076,șampon copii,îngrijire personală,Johnson’s,300,ml,9.80,RON
+P077,săpun lichid,produse de menaj,Protex,500,ml,7.20,RON
+P078,detergent capsule,produse de menaj,Ariel,20,buc,35.00,RON
+P079,banane bio,legume și fructe,Profi,1,kg,6.80,RON
+P080,roșii românești,legume și fructe,Profi,1,kg,7.90,RON
+P081,vin roșu demisec,băuturi,Recaș,0.75,l,19.50,RON

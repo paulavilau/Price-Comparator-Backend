@@ -24,6 +24,8 @@ public class CsvImportService {
 
     private static final String DATA_FOLDER = "data";
 
+     // Runs when the application starts
+     // Imports csv files from the data folder
     @PostConstruct
     public void importCsvFiles() throws Exception {
         Path folderPath = Paths.get(new ClassPathResource(DATA_FOLDER).getURI());
@@ -43,7 +45,9 @@ public class CsvImportService {
         }
     }
 
-
+     // Imports a price file
+     // If there is already an entry for the product, store and date, it updates the price
+     // Otherwise, it saves a new entry
     private void importPriceFile(File file) throws Exception {
         String fileName = file.getName();
         String[] parts = fileName.replace(".csv", "").split("_");
@@ -51,15 +55,17 @@ public class CsvImportService {
         String storeName = parts[0].toLowerCase();
         LocalDate date = LocalDate.parse(parts[1]);
 
+        // Creates or retrieves the store
         Store store = storeRepository.findById(storeName).orElseGet(() -> {
             Store s = new Store(storeName);
             return storeRepository.save(s);
         });
 
         try (CSVReader reader = new CSVReader(new FileReader(file, java.nio.charset.StandardCharsets.UTF_8))) {
-            String[] header = reader.readNext(); 
+            String[] header = reader.readNext();
             String[] line;
             while ((line = reader.readNext()) != null) {
+                // Extracts information from the file
                 String productId = line[0];
                 String productName = line[1];
                 String category = line[2];
@@ -69,11 +75,13 @@ public class CsvImportService {
                 double price = Double.parseDouble(line[6]);
                 String currency = line[7];
 
+                // Creats or retrieves the product
                 Product product = productRepository.findById(productId).orElseGet(() -> {
                     Product p = new Product(productId, productName, category, brand, quantity, unit);
                     return productRepository.save(p);
                 });
 
+                // If the product already exists, we update the price
                 Optional<PriceEntry> existing = priceEntryRepository
                         .findByProductAndStoreAndDate(product, store, date);
 
@@ -90,13 +98,14 @@ public class CsvImportService {
         }
     }
 
-
+     // Imports a discount file
+     // Each lines in the file represents a discount for a product in a store during a specific period
     private void importDiscountFile(File file) throws Exception {
         String fileName = file.getName();
         String[] parts = fileName.replace(".csv", "").split("_");
 
         String storeName = parts[0].toLowerCase();
-        LocalDate importDate = LocalDate.parse(parts[2]);
+        LocalDate importDate = LocalDate.parse(parts[2]); // Data extrasa din numele fisierului
 
         Store store = storeRepository.findById(storeName).orElseGet(() -> {
             Store s = new Store(storeName);
@@ -107,6 +116,7 @@ public class CsvImportService {
             String[] header = reader.readNext();
             String[] line;
             while ((line = reader.readNext()) != null) {
+                // Extracts information from the file
                 String productId = line[0];
                 String productName = line[1];
                 String brand = line[2];
@@ -130,12 +140,12 @@ public class CsvImportService {
                     discount.setPercentageOfDiscount(percentage);
                     discountEntryRepository.save(discount);
                 } else {
-                    DiscountEntry discount = new DiscountEntry(null, product, store, fromDate, toDate, importDate, percentage);
+                    DiscountEntry discount = new DiscountEntry(
+                        null, product, store, fromDate, toDate, importDate, percentage);
                     discountEntryRepository.save(discount);
                 }
             }
         }
     }
-
-
 }
+

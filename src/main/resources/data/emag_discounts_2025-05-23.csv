@@ -1,0 +1,8 @@
+product_id,product_name,brand,package_quantity,package_unit,product_category,from_date,to_date,percentage_of_discount
+P068,iaurt de băut,Activia,0.33,kg,lactate,2025-05-08,2025-06-14,10
+P069,unt 82%,LaDorna,0.2,kg,lactate,2025-05-08,2025-06-14,5
+P070,salată iceberg,Profi,1,buc,legume și fructe,2025-05-08,2025-06-14,12
+P073,napolitane cu cremă,Joe,0.18,kg,gustări,2025-05-08,2025-06-14,8
+P074,lapte condensat,Milkpak,0.4,kg,alimente de bază,2025-05-08,2025-06-14,6
+P078,detergent capsule,Ariel,20,buc,produse de menaj,2025-05-08,2025-06-14,15
+P081,vin roșu demisec,Recaș,0.75,l,băuturi,2025-05-08,2025-06-14,10

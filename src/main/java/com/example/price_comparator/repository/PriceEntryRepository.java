@@ -7,7 +7,11 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PriceEntryRepository extends JpaRepository<PriceEntry, Long> {
+    List<PriceEntry> findByProduct(Product product);
+
     Optional<PriceEntry> findByProductAndStoreAndDate(Product product, Store store, LocalDate date);
 
     List<PriceEntry> findByProductAndDate(Product product, LocalDate date);
+
+    List<PriceEntry> findByDate(LocalDate date);
 }

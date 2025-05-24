@@ -1,0 +1,26 @@
+product_id,product_name,product_category,brand,package_quantity,package_unit,price,currency
+X001,lapte LaDorna,lactate,LaDorna,1,l,9.80,RON
+X002,iaurt natur,lactate,Dorna,0.4,kg,11.60,RON
+X005,ouă mărimea L,ouă,Auchan,10,buc,13.10,RON
+X008,brânză de vaci,lactate,Pilos,0.3,kg,12.90,RON
+X011,pâine albă,panificație,Auchan,500,g,3.40,RON
+X014,roșii cherry,legume și fructe,Auchan,250,g,6.90,RON
+X017,piept pui,carne,Auchan,1,kg,28.90,RON
+X020,spaghetti nr.5,paste făinoase,Barilla,500,g,5.70,RON
+X021,zahăr tos,alimente de bază,Auchan,1,kg,4.30,RON
+X024,apă plată,băuturi,Aqua Carpatica,2,l,5.10,RON
+X026,banane,legume și fructe,Auchan,1,kg,6.00,RON
+X028,ulei floarea-soarelui,alimente de bază,Bunica,1,l,9.30,RON
+X031,biscuiți cu unt,gustări,Deluxe,0.2,kg,7.00,RON
+X034,cafea măcinată,cafea,Davidoff,0.25,kg,22.60,RON
+X037,detergent lichid,produse de menaj,Persil,2.5,l,49.50,RON
+X040,șampon uscat,îngrijire personală,Head & Shoulders,400,ml,17.90,RON
+X043,hârtie igienică,produse de menaj,Zewa,10,role,18.80,RON
+X046,piper negru măcinat,condimente,Kotanyi,50,g,6.05,RON
+X049,vin alb demisec,băuturi,Jidvei,0.75,l,23.30,RON
+X052,ciocolată neagră 70%,gustări,Fin Carre,100,g,3.80,RON
+X055,cartofi albi,legume și fructe,Auchan,1,kg,3.00,RON
+X057,ceapă galbenă,legume și fructe,Auchan,1,kg,2.80,RON
+X064,mălai extra,alimente de bază,Pambac,1,kg,5.50,RON
+X065,file somon,pește,Auchan,0.2,kg,25.00,RON
+X066,cremă de brânză,lactate,Almette,0.15,kg,8.50,RON
