@@ -7,11 +7,11 @@ This is a Java Spring Boot application that enables users to compare product pri
 ## Table of Contents
 
 * [Features](#Features)
-* [Prerequisites](#-prerequisites)
-* [Environment Variables](#-environment-variables)
-* [Getting Started](#-getting-started)
-* [CSV Data Import](#-csv-data-import)
-* [API Endpoints](#-api-endpoints)
+* [Prerequisites](#Prerequisites)
+* [Environment Variables](#Environment-variables)
+* [Getting Started](#Getting-started)
+* [CSV Data Import](#Csv-data-import)
+* [API Endpoints](#Api-endpoints)
 
   * [1. Basket Optimization](#1-basket-optimization)
   * [2. Price History](#2-price-history)
