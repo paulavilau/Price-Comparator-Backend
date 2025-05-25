@@ -9,7 +9,7 @@ Below are screenshots from my local development setup:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1ab88ba2-62da-4de2-acf4-3eb70199514c" alt="PostgresQL" width="25%" style="margin-right: 10px;" />
-  <img src="https://github.com/user-attachments/assets/27fe110b-38d2-4bb5-8000-4e323c87e56e" alt="Vs Code" width="30%" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/3d6f945b-2010-47ee-851a-7f2a7ebb8200" alt="Vs Code" width="30%" style="margin: 0 10px;" />
   <img src="https://github.com/user-attachments/assets/877e0362-cf15-4d74-be4c-1da011cef178" alt="Postman" width="30%" style="margin-left: 10px;" />
 </p>
 
