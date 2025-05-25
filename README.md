@@ -6,7 +6,7 @@ This is a Java Spring Boot application that enables users to compare product pri
 
 ## Table of Contents
 
-* [Features](#-features)
+* [Features](#-Features)
 * [Prerequisites](#-prerequisites)
 * [Environment Variables](#-environment-variables)
 * [Getting Started](#-getting-started)
