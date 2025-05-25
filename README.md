@@ -2,6 +2,17 @@
 
 This is a Java Spring Boot application that enables users to compare product prices across different stores, track discounts, receive alerts, and optimize shopping baskets.
 
+Below are screenshots from my local development setup:
+- PostgreSQL database setup
+- Project structure and run in VS Code
+- API testing in Postman
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1ab88ba2-62da-4de2-acf4-3eb70199514c" alt="PostgresQL" width="25%" style="margin-right: 10px;" />
+  <img src="https://github.com/user-attachments/assets/27fe110b-38d2-4bb5-8000-4e323c87e56e" alt="Vs Code" width="30%" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/877e0362-cf15-4d74-be4c-1da011cef178" alt="Postman" width="30%" style="margin-left: 10px;" />
+</p>
+
 ---
 
 ## Table of Contents
@@ -82,9 +93,10 @@ or define them in `launch.json`.
 git clone [https://github.com/your-org/price-comparator-backend.git](https://github.com/your-org/price-comparator-backend.git)
 cd price-comparator-backend
 
-````
 2. Ensure your environment variables are set.
-3. Start the application:
+3. Start the application by going to `Run` and `Start Debugging` or by running this command:
+
+````
 mvn spring-boot:run
 ````
 
@@ -122,6 +134,9 @@ Request Body:
 
 Returns the cheapest store for each product ID on the specified date.
 
+![image](https://github.com/user-attachments/assets/78015e9e-27e1-4396-aeb7-5222ab3cd9b4)
+
+
 ### 2. Price History
 
 **POST** `/prices/history`
@@ -130,12 +145,15 @@ Request Body:
 
 ```json
 {
-  "productId": "X001",
-  "store": "kaufland"
+  "productId": "X031",
+  "store": "auchan"
 }
 ```
 
 Retrieves historical prices for a product at a given store.
+
+![image](https://github.com/user-attachments/assets/5018a576-c446-485c-af89-b1dd1a7731d5)
+
 
 ### 3. Best Value Recommendations
 
@@ -147,11 +165,20 @@ Example:
 GET /prices/best-value?productName=lapte Zuzu&date=2025-05-23
 ```
 
+Retrieves the product options for a product name and orders them by the best value per unit ascendingly.
+
+![image](https://github.com/user-attachments/assets/0af04c59-cba9-47d0-b8a5-0b747f70f3bb)
+
 **Category recommendations:**
 
 ```
 GET /prices/recommendations?category=lactate&date=2025-05-23
 ```
+
+Retrieves the products with the best value per unit for a given category.
+
+![image](https://github.com/user-attachments/assets/561d0836-4620-4d5c-b5db-4008c3c95f62)
+
 
 ### 4. Price Alerts
 
@@ -163,11 +190,19 @@ Request Body:
 
 ```json
 {
-  "userEmail": "john@example.com",
-  "productId": "X028",
-  "targetPrice": 7.00
+  "userEmail": "vilaupaula@yahoo.ro",
+  "productId": "X031",
+  "targetPrice": 100
 }
 ```
+
+Creates an alert in the database for that specific product and sends an email when the product price drops below that target.
+> **Note:** After the email is sent the triggered flag in the database for that price alert will be set to true (to prevent sending the same alert).
+
+![image](https://github.com/user-attachments/assets/c2c2cdfa-8ee0-4506-852e-24837537a96d)
+
+![image](https://github.com/user-attachments/assets/ff483652-d782-45d9-948d-01e1849494bd)
+
 
 #### Check Triggered Alerts (manual)
 
@@ -184,6 +219,9 @@ GET /alerts/triggered-alert?date=2025-05-23
 **GET** `/discounts/best`
 
 Retrieves the top discounts available across all stores.
+
+![image](https://github.com/user-attachments/assets/49617fcb-73c7-4d9c-8cca-1a6834e940d2)
+
 
 ### 6. New Discounts (Last 24h)
 
