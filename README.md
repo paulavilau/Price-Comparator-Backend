@@ -84,7 +84,6 @@ cd price-comparator-backend
 ````
 2. Ensure your environment variables are set.
 3. Start the application:
-```bash
 mvn spring-boot:run
 ````
 
