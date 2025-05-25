@@ -24,7 +24,7 @@ public class DiscountController {
         return discountService.getBestDiscounts(LocalDate.now());
     }
 
-    // Endpoint to get the best discounts for a specific date
+    // Endpoint to get discounts for the last 24 hours
     @GetMapping("/new")
     public List<DiscountEntry> getNewDiscounts() {
         return discountService.getNewDiscounts();
