@@ -2,17 +2,6 @@
 
 This is a Java Spring Boot application that enables users to compare product prices across different stores, track discounts, receive alerts, and optimize shopping baskets.
 
-Below are screenshots from my local development setup:
-- PostgreSQL database setup
-- Project structure and run in VS Code
-- API testing in Postman
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/1ab88ba2-62da-4de2-acf4-3eb70199514c" alt="PostgresQL" width="25%" style="margin-right: 10px;" />
-  <img src="https://github.com/user-attachments/assets/3d6f945b-2010-47ee-851a-7f2a7ebb8200" alt="Vs Code" width="30%" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/877e0362-cf15-4d74-be4c-1da011cef178" alt="Postman" width="30%" style="margin-left: 10px;" />
-</p>
-
 ---
 
 ## Table of Contents
@@ -190,7 +179,7 @@ Request Body:
 
 ```json
 {
-  "userEmail": "vilaupaula@yahoo.ro",
+  "userEmail": "example@yahoo.ro",
   "productId": "X031",
   "targetPrice": 100
 }
@@ -199,9 +188,7 @@ Request Body:
 Creates an alert in the database for that specific product and sends an email when the product price drops below that target.
 > **Note:** After the email is sent the triggered flag in the database for that price alert will be set to true (to prevent sending the same alert).
 
-![image](https://github.com/user-attachments/assets/c2c2cdfa-8ee0-4506-852e-24837537a96d)
-
-![image](https://github.com/user-attachments/assets/ff483652-d782-45d9-948d-01e1849494bd)
+![image](https://github.com/user-attachments/assets/3bfe4caa-bae8-441b-84ca-77fa32c5fddd)
 
 
 #### Check Triggered Alerts (manual)
