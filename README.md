@@ -40,7 +40,7 @@ This is a Java Spring Boot application that enables users to compare product pri
 * Java 17+
 * Maven 3.6+
 * PostgreSQL (or any JDBC-compatible database)
-**Note:** Make sure you have a PostgreSQL database named `price-comp` running locally on the default port (`5432`), as specified in `src/main/resources/application.properties`.
+> **Note:** Make sure you have a PostgreSQL database named `price-comp` running locally on the default port (`5432`), as specified in `src/main/resources/application.properties`.
   
 ---
 
